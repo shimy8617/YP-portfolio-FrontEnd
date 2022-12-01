@@ -22,6 +22,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
     <title>My Portfolio</title>
   </head>
   <body>
@@ -57,6 +58,9 @@
     <main>
       <!-------------- BANNER --------------->
       <div class="p-5 mb-4 bg-light rounded-3 banner">
+        <div class="btn-edit">
+          <button class="btn-right" type="button"><i class="fas fa-pen"></i></button>
+        </div>
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold quote text-center">
             <i class="fas fa-quote-left quotationMark"></i>
@@ -69,17 +73,28 @@
       </div>
 
       <!-------------- PROFILE --------------->
+        <div class="container-fluid">
       <div class="text-center profile lh-lg">
         <div class="row lh-lg text-start profileDesc">
           <div class="col-4 fs-5">Cristina Elisabet Shim</div>
-          <div class="col-8 fs-6">
-            I'm from Buenos Aires, Argentina. I'm a React developer Jr and very
-            passionate about technology, coding and learning new things.
-          </div>
+          <div class="col-7 bio">
+            <div class="btn-editBio" onclick="changeBio()">
+              <button class="btn-right" type="button"><i class="fas fa-pen"></i></button>
+            </div>
+            <div class="fs-6 m-auto" id="bioText">
+              I'm from Buenos Aires, Argentina. I'm a React developer Jr and very
+              passionate about technology, coding and learning new things.
+            </div>
+            <div>
+              <input id="editBio" type="text" oninput="newBio(this.value)" style="display: none">
+            </div>
+        </div>
         </div>
       </div>
+    </div>
 
       <!-------------- EXPERIENCE --------------->
+        <div class="container-fluid">
       <div class="text-center experience lh-lg">
         <div class="row text-start">
           <div class="col-12 fs-5 bg-gradient experienceTitle">Experience</div>
@@ -93,8 +108,10 @@
           <div class="col-8 fs-6">I build...</div>
         </div>
       </div>
+    </div>
 
       <!-------------- EDUCATION --------------->
+        <div class="container-fluid">
       <div class="text-center education lh-lg">
         <div class="row text-start">
           <div class="col-12 fs-5 bg-gradient educationTitle">Education</div>
@@ -122,6 +139,7 @@
           <div class="col-8 fs-6">Fashion Designer and Textile</div>
         </div>
       </div>
+    </div>
 
       <!-------------- SOFT SKILLS --------------->
       <div class="container text-center">
