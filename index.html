@@ -27,7 +27,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-gradient">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="navbar-brand" href="#">
             <img
@@ -41,13 +41,13 @@
           </div>
           <div class="text-end" id="navbarText">
             <a>
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a>
               <i class="fab fa-instagram"></i>
             </a>
             <a>
-              <i class="fab fa-facebook"></i>
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <button class="loginButton" type="button">Login</button>
           </div>
@@ -59,7 +59,7 @@
       <!-------------- BANNER --------------->
       <div class="p-5 mb-4 bg-light rounded-3 banner">
         <div class="btn-edit">
-          <button class="btn-right" type="button"><i class="fas fa-pen"></i></button>
+          <button class="btn-style" type="button"><i class="fas fa-pen"></i></button>
         </div>
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold quote text-center">
@@ -76,10 +76,18 @@
         <div class="container-fluid">
       <div class="text-center profile lh-lg">
         <div class="row lh-lg text-start profileDesc">
-          <div class="col-4 fs-5">Cristina Elisabet Shim</div>
+          <div class="col-4 fs-5 profileName">
+          <div class="btn-editName" onclick="changeName()">
+            <button class="btn-style" type="button"><i class="fas fa-pen"></i></button>
+          </div>
+          <div class="profileName"><h2>Cristina Elisabet Shim</h2></div>
+          <div>
+            <input id="editName" type="text" oninput="newName(this.value)" style="display: none">
+          </div>
+        </div>
           <div class="col-7 bio">
             <div class="btn-editBio" onclick="changeBio()">
-              <button class="btn-right" type="button"><i class="fas fa-pen"></i></button>
+              <button class="btn-style" type="button"><i class="fas fa-pen"></i></button>
             </div>
             <div class="fs-6 m-auto" id="bioText">
               I'm from Buenos Aires, Argentina. I'm a React developer Jr and very
@@ -97,14 +105,15 @@
         <div class="container-fluid">
       <div class="text-center experience lh-lg">
         <div class="row text-start">
-          <div class="col-12 fs-5 bg-gradient experienceTitle">Experience</div>
+          <div class="col-12 fs-5 experienceTitle">Experience</div>
         </div>
         <div class="row lh-lg text-start experienceDesc">
-          <div class="col-4 fs-5">AYPOO</div>
+          
+          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>AYPOO</div>
           <div class="col-8 fs-6">I worked as a...</div>
         </div>
         <div class="row lh-lg text-start experienceDesc2">
-          <div class="col-4 fs-5">Wordpress Developer</div>
+          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Wordpress Developer</div>
           <div class="col-8 fs-6">I build...</div>
         </div>
       </div>
@@ -114,28 +123,28 @@
         <div class="container-fluid">
       <div class="text-center education lh-lg">
         <div class="row text-start">
-          <div class="col-12 fs-5 bg-gradient educationTitle">Education</div>
+          <div class="col-12 fs-5 educationTitle">Education</div>
         </div>
-        <div class="row lh-lg text-start bg-gradient educationDesc2">
-          <div class="col-4 fs-5">Zero To Mastery Academy -2022</div>
+        <div class="row lh-lg text-start educationDesc2">
+          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Zero To Mastery Academy -2022</div>
           <div class="col-8 fs-6">
             React Developer (with Redux, Hooks, GraphQL)
           </div>
         </div>
-        <div class="row lh-lg text-start bg-gradient educationDesc">
-          <div class="col-4 fs-5">Educación IT - 2021</div>
+        <div class="row lh-lg text-start educationDesc">
+          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Educación IT - 2021</div>
           <div class="col-8 fs-6">Software Tester QA Junior</div>
         </div>
-        <div class="row lh-lg text-start bg-gradient educationDesc2">
+        <div class="row lh-lg text-start educationDesc2">
           <div class="col-4 fs-5">
-            FIT (Fashion Institute of Technology) -2013
+            <i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>FIT (Fashion Institute of Technology) -2013
           </div>
           <div class="col-8 fs-6">
             FIT's Summer ESL and Fashion Business Program
           </div>
         </div>
-        <div class="row lh-lg text-start bg-gradient educationDesc">
-          <div class="col-4 fs-5">Universidad de Palermo - 2011</div>
+        <div class="row lh-lg text-start educationDesc">
+          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Universidad de Palermo - 2011</div>
           <div class="col-8 fs-6">Fashion Designer and Textile</div>
         </div>
       </div>
