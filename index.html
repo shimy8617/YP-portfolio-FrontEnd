@@ -108,9 +108,17 @@
           <div class="col-12 fs-5 experienceTitle">Experience</div>
         </div>
         <div class="row lh-lg text-start experienceDesc">
-          
+          <div class="btn-editExp" onclick="changeExp()">
+            <button class="btn-style" type="button"><i class="fas fa-pen"></i></button>
+          </div>
+          <div class="btn-editExp" onclick="changeExp()">
+            <button class="btn-style" type="button"><i class="fas fa-times"></i></button>
+          </div>
           <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>AYPOO</div>
           <div class="col-8 fs-6">I worked as a...</div>
+          <div>
+            <input id="editBio" type="text" oninput="newBio(this.value)" style="display: none">
+          </div>
         </div>
         <div class="row lh-lg text-start experienceDesc2">
           <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Wordpress Developer</div>
