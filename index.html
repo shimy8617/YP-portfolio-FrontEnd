@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
-    <script src="./index.js"></script>
+    <!-- <script src="./index.js"></script> -->
     <title>My Portfolio</title>
   </head>
   <body>
@@ -59,7 +59,9 @@
       <!-------------- BANNER --------------->
       <div class="p-5 mb-4 bg-light rounded-3 banner">
         <div class="btn-edit">
-          <button class="btn-style" type="button"><i class="fas fa-pen"></i></button>
+          <button class="btn-style" type="button">
+            <i class="fas fa-pen"></i>
+          </button>
         </div>
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold quote text-center">
@@ -73,90 +75,149 @@
       </div>
 
       <!-------------- PROFILE --------------->
-        <div class="container-fluid">
-      <div class="text-center profile lh-lg">
-        <div class="row lh-lg text-start profileDesc">
-          <div class="col-4 fs-5 profileName">
-          <div class="btn-editName" onclick="changeName()">
-            <button class="btn-style" type="button"><i class="fas fa-pen"></i></button>
+      <div class="container-fluid">
+        <div class="text-center profile lh-lg">
+          <div class="row lh-lg text-start profileDesc">
+            <div class="col-4 fs-5 profileName">
+              <div class="btn-editName" onclick="changeName()">
+                <button class="btn-style" type="button">
+                  <i class="fas fa-pen"></i>
+                </button>
+              </div>
+              <div class="profileName"><h2>Cristina Elisabet Shim</h2></div>
+              <div>
+                <input
+                  id="editName"
+                  type="text"
+                  oninput="newName(this.value)"
+                  style="display: none"
+                />
+              </div>
+            </div>
+            <div class="col-7 bio">
+              <div class="btn-editBio" onclick="changeBio()">
+                <button class="btn-style" type="button">
+                  <i class="fas fa-pen"></i>
+                </button>
+              </div>
+              <div class="fs-6 m-auto" id="bioText">
+                I'm from Buenos Aires, Argentina. I'm a React developer Jr and
+                very passionate about technology, coding and learning new
+                things.
+              </div>
+              <div>
+                <input
+                  id="editBio"
+                  type="text"
+                  oninput="newBio(this.value)"
+                  style="display: none"
+                />
+              </div>
+            </div>
           </div>
-          <div class="profileName"><h2>Cristina Elisabet Shim</h2></div>
-          <div>
-            <input id="editName" type="text" oninput="newName(this.value)" style="display: none">
-          </div>
-        </div>
-          <div class="col-7 bio">
-            <div class="btn-editBio" onclick="changeBio()">
-              <button class="btn-style" type="button"><i class="fas fa-pen"></i></button>
-            </div>
-            <div class="fs-6 m-auto" id="bioText">
-              I'm from Buenos Aires, Argentina. I'm a React developer Jr and very
-              passionate about technology, coding and learning new things.
-            </div>
-            <div>
-              <input id="editBio" type="text" oninput="newBio(this.value)" style="display: none">
-            </div>
-        </div>
         </div>
       </div>
-    </div>
+      <input type="file" id="file1" onchange="showFile(this)" />
 
       <!-------------- EXPERIENCE --------------->
-        <div class="container-fluid">
-      <div class="text-center experience lh-lg">
-        <div class="row text-start">
-          <div class="col-12 fs-5 experienceTitle">Experience</div>
-        </div>
-        <div class="row lh-lg text-start experienceDesc">
-          <div class="btn-editExp" onclick="changeExp()">
-            <button class="btn-style" type="button"><i class="fas fa-pen"></i></button>
+      <div class="container-fluid">
+        <div class="text-center experience lh-lg">
+          <div class="row text-start">
+            <div class="col-12 fs-5 experienceTitle">Experience</div>
           </div>
-          <div class="btn-editExp" onclick="changeExp()">
-            <button class="btn-style" type="button"><i class="fas fa-times"></i></button>
+          <div class="row lh-lg text-start experienceDesc">
+            <div class="btn-editExp" onclick="changeExp()">
+              <button class="btn-style" type="button">
+                <i class="fas fa-pen"></i>
+              </button>
+            </div>
+            <div class="btn-editExp" onclick="changeExp()">
+              <button class="btn-style" type="button">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="col-4 fs-5">
+              <i
+                class="far fa-circle"
+                style="font-size: 12px; margin-right: 1rem"
+              ></i
+              >AYPOO
+            </div>
+            <div class="col-8 fs-6">I worked as a...</div>
+            <div>
+              <input
+                id="editBio"
+                type="text"
+                oninput="newBio(this.value)"
+                style="display: none"
+              />
+            </div>
           </div>
-          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>AYPOO</div>
-          <div class="col-8 fs-6">I worked as a...</div>
-          <div>
-            <input id="editBio" type="text" oninput="newBio(this.value)" style="display: none">
+          <div class="row lh-lg text-start experienceDesc2">
+            <div class="col-4 fs-5">
+              <i
+                class="far fa-circle"
+                style="font-size: 12px; margin-right: 1rem"
+              ></i
+              >Wordpress Developer
+            </div>
+            <div class="col-8 fs-6">I build...</div>
           </div>
-        </div>
-        <div class="row lh-lg text-start experienceDesc2">
-          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Wordpress Developer</div>
-          <div class="col-8 fs-6">I build...</div>
         </div>
       </div>
-    </div>
 
       <!-------------- EDUCATION --------------->
-        <div class="container-fluid">
-      <div class="text-center education lh-lg">
-        <div class="row text-start">
-          <div class="col-12 fs-5 educationTitle">Education</div>
-        </div>
-        <div class="row lh-lg text-start educationDesc2">
-          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Zero To Mastery Academy -2022</div>
-          <div class="col-8 fs-6">
-            React Developer (with Redux, Hooks, GraphQL)
+      <div class="container-fluid">
+        <div class="text-center education lh-lg">
+          <div class="row text-start">
+            <div class="col-12 fs-5 educationTitle">Education</div>
           </div>
-        </div>
-        <div class="row lh-lg text-start educationDesc">
-          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Educación IT - 2021</div>
-          <div class="col-8 fs-6">Software Tester QA Junior</div>
-        </div>
-        <div class="row lh-lg text-start educationDesc2">
-          <div class="col-4 fs-5">
-            <i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>FIT (Fashion Institute of Technology) -2013
+          <div class="row lh-lg text-start educationDesc2">
+            <div class="col-4 fs-5">
+              <i
+                class="far fa-circle"
+                style="font-size: 12px; margin-right: 1rem"
+              ></i
+              >Zero To Mastery Academy -2022
+            </div>
+            <div class="col-8 fs-6">
+              React Developer (with Redux, Hooks, GraphQL)
+            </div>
           </div>
-          <div class="col-8 fs-6">
-            FIT's Summer ESL and Fashion Business Program
+          <div class="row lh-lg text-start educationDesc">
+            <div class="col-4 fs-5">
+              <i
+                class="far fa-circle"
+                style="font-size: 12px; margin-right: 1rem"
+              ></i
+              >Educación IT - 2021
+            </div>
+            <div class="col-8 fs-6">Software Tester QA Junior</div>
           </div>
-        </div>
-        <div class="row lh-lg text-start educationDesc">
-          <div class="col-4 fs-5"><i class="far fa-circle" style="font-size:12px; margin-right:1rem"></i>Universidad de Palermo - 2011</div>
-          <div class="col-8 fs-6">Fashion Designer and Textile</div>
+          <div class="row lh-lg text-start educationDesc2">
+            <div class="col-4 fs-5">
+              <i
+                class="far fa-circle"
+                style="font-size: 12px; margin-right: 1rem"
+              ></i
+              >FIT (Fashion Institute of Technology) -2013
+            </div>
+            <div class="col-8 fs-6">
+              FIT's Summer ESL and Fashion Business Program
+            </div>
+          </div>
+          <div class="row lh-lg text-start educationDesc">
+            <div class="col-4 fs-5">
+              <i
+                class="far fa-circle"
+                style="font-size: 12px; margin-right: 1rem"
+              ></i
+              >Universidad de Palermo - 2011
+            </div>
+            <div class="col-8 fs-6">Fashion Designer and Textile</div>
+          </div>
         </div>
       </div>
-    </div>
 
       <!-------------- SOFT SKILLS --------------->
       <div class="container text-center">
@@ -234,19 +295,24 @@
         <div class="card-body">
           <h5 class="card-title">Name of the project</h5>
           <p class="card-text">Description of the project</p>
-          <p class="card-text"><small class="text-muted">Date of creation</small></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a></div>
-        <img src="..." class="card-img-bottom" alt="...">
+          <p class="card-text">
+            <small class="text-muted">Date of creation</small>
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <img src="..." class="card-img-bottom" alt="..." />
       </div>
       <div class="card m-3">
         <div class="card-body">
           <h5 class="card-title">Name of the project</h5>
           <p class="card-text">Description of the project</p>
-          <p class="card-text"><small class="text-muted">Date of creation</small></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a></div>
-        <img src="..." class="card-img-bottom" alt="...">
+          <p class="card-text">
+            <small class="text-muted">Date of creation</small>
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <img src="..." class="card-img-bottom" alt="..." />
       </div>
-
     </main>
 
     <footer></footer>
@@ -257,5 +323,45 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function changeBio() {
+        document.getElementById("editBio").style.display = "block";
+        let text = document.getElementById("bioText").innerText;
+        console.log(text);
+      }
+
+      function newBio(value) {
+        document.getElementById("bioText").innerText = value;
+      }
+
+      function logMessage(message) {
+        console.log(message + "<br>");
+      }
+
+      // controla si se presiono enter
+      let textarea = document.getElementById("editBio");
+      textarea.addEventListener("keyup", (e) => {
+        logMessage(`Key "${e.key}" released [event: keyup]`);
+        if (e.key == "Enter") {
+          document.getElementById("editBio").style.display = "none";
+        }
+      });
+
+      // carga el contenido de un archivo de texto y lo muestra en el parrafo
+      function showFile(input) {
+        let file = input.files[0];
+        alert(`File name: ${file.name}`);
+        alert(`Last modified: ${file.lastModified}`);
+
+        let reader = new FileReader();
+        reader.onload = function () {
+          console.log(reader.result);
+          document.getElementById("editBio").innerText = reader.result;
+        };
+        reader.onerror = function () {
+          console.log(reader.error);
+        };
+      }
+    </script>
   </body>
 </html>
