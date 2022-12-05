@@ -130,6 +130,18 @@ nav{
     color: rgb(0, 0, 0);
 }
 
+.btn-editExp {
+    position: absolute;
+    top: -2rem;
+    right: 5rem;
+}
+
+.btn-deleteExp {
+    position: absolute;
+    top: -2rem;
+    right: 3rem;
+}
+
 .experience {
     padding: 2rem 0;
 }
@@ -142,6 +154,7 @@ nav{
 }
 
 .experienceDesc {
+    position: relative;
     padding: 0.5rem 2rem;
 }
 
